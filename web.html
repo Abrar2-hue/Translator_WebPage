@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    h1{
+        font-size: 50px;
+        text-align: center;
+        color: rgb(212, 198, 238);
+    }
+    label{
+        color: white;
+        font-size: 40px;
+    }
+    input{
+        font-size: 20px;
+        margin-right: 10px;
+        margin-bottom: 10px; /* Add margin-bottom for spacing */
+        padding: 5px; /* Add padding for spacing */
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .translation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+    }
+</style>
+<body>
+    <h1>Translator</h1>
+    <div class="container">
+        <form method="post" action="/">
+            <label for="english-input">ENGLISH:</label><br>
+            <input type="text" id="english-input" name="english-input"><br><br>
+            <input type="submit" value="Translator">
+        </form>
+        <form method ='post' action="/">
+            <label for="french-input">French:</label><br>
+            <input type="text" id="french-input" name="french-input"><br><br>
+            <input type="submit" value="Translator">
+        </form>
+    </div>
+    
+    <div class="translation">
+        <h2>Translation Result</h2>
+        <p>Original Text: {{ original }}</p>
+        <p>Translation: {{ translation }}</p>
+        <p>Direction: {{ direction }}</p>
+    </div>
+    
+</body>
+</html>
